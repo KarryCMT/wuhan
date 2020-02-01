@@ -6,13 +6,24 @@ const routes = [
   
   {
     path: '/',
-    name: 'home',
+    name: 'layout',
     component:()=>import('../layout/Home'),
     children:[
       {
-        path: 'index',
-        name: 'index',
-        component: () => import('../views/index.vue')
+        path: '/index',
+        component: () => import('../views/index')
+      },
+      {
+        path: '/categroy',
+        component: () => import('../views/categroy')
+      },
+      {
+        path: '/cart',
+        component: () => import('../views/cart')
+      },
+      {
+        path: '/profile',
+        component: () => import('../views/profile')
       },
     ]
   }
